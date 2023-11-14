@@ -13,8 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//127.0.0.1:8000/fitri ==> HALO SAYA FITRI</h1>
-Route::get('fitri/', function () {
-    return "<h1>HALO SAYA FITRI</h1>";
+Route::get('/', function () {
+    return view("home"); // Diperbaharui
 });
  
