@@ -22,9 +22,15 @@
 
 <body>
 
-  <div class="main">
+  <div class="container">
 
-    @yield('main')
+    @include('partials.sidebar')
+
+    <div class="main">
+
+      @yield('main')
+
+    </div>
 
   </div>
 

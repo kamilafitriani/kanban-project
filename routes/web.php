@@ -15,7 +15,10 @@ use App\Http\Controllers\TaskController; // Ditambahkan
 */
 
 Route::get('/', function () {
-    return view("home"); // Diperbaharui
-});
 
-Route::get('/tasks/', [TaskController::class, 'index']); // Ditambahkan
+    return view('home');
+
+})->name('home'); // name ditambahkan
+
+
+Route::get('/tasks/', [TaskController::class, 'index'])->name('tasks.index'); // name ditambahkan
