@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController; // Ditambahkan
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view("home"); // Diperbaharui
-});
- 
+
+    return view('home');
+
+})->name('home'); // name ditambahkan
+
+
+Route::get('/tasks/', [TaskController::class, 'index'])->name('tasks.index');
+Route::get('/tasks/{id}/edit', [TaskController::class, 'edit'])->name('tasks.edit');
