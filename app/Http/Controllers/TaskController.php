@@ -127,4 +127,21 @@ public function index()
     ]);
 
 }
+public function edit($id)
+
+{
+
+    $pageTitle = 'Edit List'; // Ditambahkan
+
+    $task = $this->tasks[$id - 1];
+
+    return view('tasks.edit', [
+
+        'pageTitle' => $pageTitle, //Ditambahkan
+
+        'task' => $task,
+
+    ]);
+
+}
 }

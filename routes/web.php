@@ -21,4 +21,5 @@ Route::get('/', function () {
 })->name('home'); // name ditambahkan
 
 
-Route::get('/tasks/', [TaskController::class, 'index'])->name('tasks.index'); // name ditambahkan
+Route::get('/tasks/', [TaskController::class, 'index'])->name('tasks.index');
+Route::get('/tasks/{id}/edit', [TaskController::class, 'edit'])->name('tasks.edit');
